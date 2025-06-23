@@ -1,48 +1,71 @@
 {
   "expo": {
-    "name": "SimplifiedPKM",
+    "name": "Simplified PKM",
     "slug": "simplified-pkm",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/images/icon.png",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/images/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#007AFF"
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.yourcompany.simplifiedpkm",
+      "bundleIdentifier": "com.legacyguard.simplifiedpkm",
       "infoPlist": {
-        "NSCameraUsageDescription": "This app uses the camera to capture documents for deadline tracking.",
-        "NSPhotoLibraryUsageDescription": "This app needs access to photo library to import documents."
+        "NSCameraUsageDescription": "This app uses the camera to capture documents for deadline tracking and organization.",
+        "NSPhotoLibraryUsageDescription": "This app needs access to photo library to import and organize your documents.",
+        "NSCalendarsUsageDescription": "This app creates calendar events for important deadlines to help you stay organized.",
+        "NSContactsUsageDescription": "This app accesses contacts for family sharing and emergency access features.",
+        "NSMicrophoneUsageDescription": "This app may use microphone for voice notes and document descriptions.",
+        "NSDocumentUsageDescription": "This app manages your personal documents to track important deadlines.",
+        "NSFaceIDUsageDescription": "This app uses Face ID to securely access your private documents."
       }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#007AFF"
       },
-      "package": "com.yourcompany.simplifiedpkm",
+      "package": "com.legacyguard.simplifiedpkm",
       "permissions": [
         "CAMERA",
         "READ_EXTERNAL_STORAGE",
         "WRITE_EXTERNAL_STORAGE",
-        "NOTIFICATIONS"
+        "NOTIFICATIONS",
+        "READ_CALENDAR",
+        "WRITE_CALENDAR",
+        "READ_CONTACTS",
+        "RECORD_AUDIO",
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT"
       ]
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
       "expo-camera",
       "expo-document-picker",
       "expo-notifications",
-      "expo-text-recognition"
-    ]
+      "expo-calendar",
+      "expo-contacts",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses photos to import document images."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id"
+      }
+    }
   }
 }
