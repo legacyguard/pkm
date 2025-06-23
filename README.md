@@ -166,6 +166,9 @@ npm run type-check
 npm run lint
 ```
 
+### Continuous Integration
+Každý Pull Request spustí GitHub Actions workflow, ktorý vykoná `npm run type-check` na overenie projektu.
+
 ## 📊 Success Metrics & KPIs
 
 ### Technical Quality:
