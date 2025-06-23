@@ -9,6 +9,7 @@
       "@/screens/*": ["src/screens/*"],
       "@/services/*": ["src/services/*"],
       "@/utils/*": ["src/utils/*"],
+      "@/context/*": ["src/context/*"],
       "@/types/*": ["src/types/*"],
       "@/styles/*": ["src/styles/*"]
     }
