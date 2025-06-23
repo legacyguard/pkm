@@ -8,15 +8,18 @@
       "@/components/*": ["src/components/*"],
       "@/screens/*": ["src/screens/*"],
       "@/services/*": ["src/services/*"],
+      "@/hooks/*": ["src/hooks/*"],
       "@/utils/*": ["src/utils/*"],
-      "@/context/*": ["src/context/*"],
       "@/types/*": ["src/types/*"],
-      "@/styles/*": ["src/styles/*"]
+      "@/styles/*": ["src/styles/*"],
+      "@/context/*": ["src/context/*"],
+      "@/assets/*": ["assets/*"]
     }
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    ".expo/types/**/*.ts"
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
   ]
 }
